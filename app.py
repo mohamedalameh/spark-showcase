@@ -281,10 +281,10 @@ def show_spark_page():
 
 
 
-    video_path = "assets/spark_demo.mp4"
-    if os.path.exists(video_path):
+    video_spark_path = "assets/spark_demo.mp4"
+    if os.path.exists(video_spark_path):
 
-        video_file = open(video_path, "rb")
+        video_file = open(video_spark_path, "rb")
         video_bytes = video_file.read()
 
         import base64
