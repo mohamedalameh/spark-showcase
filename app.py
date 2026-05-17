@@ -25,6 +25,51 @@ section[data-testid="stSidebar"] {
     border-right: 1px solid rgba(0, 221, 255, 0.15);
 }
 
+section[data-testid="stSidebar"] .stRadio label {
+    color: #ffffff !important;
+    font-size: 17px !important;
+    font-weight: 700 !important;
+    opacity: 1 !important;
+}
+
+section[data-testid="stSidebar"] .stRadio div[role="radiogroup"] label {
+    background: rgba(0, 229, 255, 0.06);
+    border: 1px solid rgba(0, 229, 255, 0.15);
+    padding: 10px 14px;
+    border-radius: 12px;
+    margin-bottom: 8px;
+    transition: all 0.2s ease;
+}
+
+section[data-testid="stSidebar"] .stRadio div[role="radiogroup"] label:hover {
+    background: rgba(0, 229, 255, 0.14);
+    border: 1px solid rgba(0, 229, 255, 0.35);
+    transform: translateX(2px);
+}
+
+section[data-testid="stSidebar"] .stMarkdown h2 {
+    color: white !important;
+    font-weight: 800 !important;
+}
+
+section[data-testid="stSidebar"] p {
+    color: #d7e7ff !important;
+    font-size: 15px !important;
+}
+
+            
+
+
+
+
+
+
+
+
+
+
+
+
 .main-title {
     font-size: 52px;
     font-weight: 800;
