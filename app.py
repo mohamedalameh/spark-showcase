@@ -154,6 +154,168 @@ page = st.sidebar.radio(
 
 
 
+################################################# KSPARKML #####################################################
+
+
+
+
+def show_spark_page():
+    st.markdown("""
+    <div class="main-title">
+        SPARK <span class="gradient-text">Automation Engine</span>
+    </div>
+    <p class="subtitle">
+        Smart Parsing, Analysis & RAN Kit for LTE/5G network optimization
+    </p>
+    <p style="color:#b8c7dd; font-size:17px;">
+        A Python-powered telecom automation platform designed to parse large network files,
+        detect inconsistencies, automate audits, generate reports, and reduce manual RAN
+        optimization work from days to seconds.
+    </p>
+    """, unsafe_allow_html=True)
+
+    st.markdown("<br>", unsafe_allow_html=True)
+
+    k1, k2, k3, k4 = st.columns(4)
+    kpis = [
+        ("< 2 Min", "Large XML Parsing"),
+        ("95%+", "Audit Time Reduction"),
+        ("4G / 5G", "Multi-Tech Support"),
+        ("Auto", "Reports & XML Output"),
+    ]
+
+    for col, (num, label) in zip([k1, k2, k3, k4], kpis):
+        with col:
+            st.markdown(f"""
+            <div class="card">
+                <div class="kpi-number" style="font-size:30px;">{num}</div>
+                <div class="kpi-label">{label}</div>
+            </div>
+            """, unsafe_allow_html=True)
+
+    st.markdown("<br>", unsafe_allow_html=True)
+
+    left, right = st.columns([1, 1])
+
+    with left:
+        st.markdown("""
+        <div class="card">
+            <div class="section-title">Problem Solved</div>
+            <p>❌ Manual XML/RAML parsing</p>
+            <p>❌ Repetitive parameter audits</p>
+            <p>❌ Time-consuming neighbor checks</p>
+            <p>❌ High risk of human error</p>
+            <p>❌ Slow reporting and validation cycles</p>
+        </div>
+        """, unsafe_allow_html=True)
+
+    with right:
+        st.markdown("""
+        <div class="card">
+            <div class="section-title">Automation Result</div>
+            <p>✅ Fast parsing of large network files</p>
+            <p>✅ Automated LTE/5G audit engine</p>
+            <p>✅ Parameter inconsistency detection</p>
+            <p>✅ Clean Excel/XML output generation</p>
+            <p>✅ Scalable workflow for thousands of sites</p>
+        </div>
+        """, unsafe_allow_html=True)
+
+    st.markdown("<br>", unsafe_allow_html=True)
+
+
+
+    st.markdown("""
+    <div class="card">
+        <div class="section-title">SPARK Core Modules</div>
+    </div>
+    """, unsafe_allow_html=True)
+
+    m1, a1, m2, a2, m3, a3, m4 = st.columns([1, 0.25, 1, 0.25, 1, 0.25, 1])
+
+    modules = [
+        ("📄", "XML / RAML<br>Parser"),
+        ("⚙️", "Parameter<br>Audit"),
+        ("📊", "Excel<br>Reports"),
+        ("🧾", "XML<br>Generator"),
+    ]
+
+    module_cols = [m1, m2, m3, m4]
+    arrow_cols = [a1, a2, a3]
+
+    for col, (icon, text) in zip(module_cols, modules):
+        with col:
+            st.markdown(f"""
+            <div class="flow-box">
+                <div style="font-size:42px;">{icon}</div>
+                <p>{text}</p>
+            </div>
+            """, unsafe_allow_html=True)
+
+    for arrow in arrow_cols:
+        with arrow:
+            st.markdown("""
+            <div style="
+                display:flex;
+                justify-content:center;
+                align-items:center;
+                height:120px;
+                font-size:42px;
+                color:#00e5ff;
+                font-weight:800;
+            ">
+                →
+            </div>
+            """, unsafe_allow_html=True)
+
+    st.markdown("<br>", unsafe_allow_html=True)
+
+
+
+    st.markdown("""
+    <div class="card">
+        <div class="section-title">Demo Video</div>
+        <p style="color:#b8c7dd;">End-to-end demonstration of automated network visualization processing.</p>
+    </div>
+    """, unsafe_allow_html=True)
+
+
+
+    video_path = "assets/spark_demo.mp4"
+    if os.path.exists(video_path):
+
+        video_file = open(video_path, "rb")
+        video_bytes = video_file.read()
+
+        import base64
+        video_base64 = base64.b64encode(video_bytes).decode()
+
+        st.markdown(f"""
+        <div style="display:flex; justify-content:center;">
+            <video width="60%" autoplay muted controls style="border-radius:18px;" id="demoVideo">
+                <source src="data:video/mp4;base64,{video_base64}" type="video/mp4">
+            </video>
+        </div>
+
+        <script>
+        const video = document.getElementById("demoVideo");
+
+        video.playbackRate = 1.3;
+
+        video.onloadedmetadata = function() {{
+            video.play();
+        }};
+        </script>
+        """, unsafe_allow_html=True)
+
+    else:
+        st.warning("Add your video here: assets/spark_demo.mp4")
+
+
+
+
+################################################# KML #####################################################
+
 
 def show_kml_page():
     st.markdown("""
@@ -550,6 +712,12 @@ if page == "Home":
     """, unsafe_allow_html=True)
 
 
+
+
+
+
+elif page == "SPARK":
+    show_spark_page()
 
 elif page == "KML Plotter":
     show_kml_page()
