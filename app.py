@@ -559,9 +559,6 @@ if st.sidebar.button("SPARK"):
 if st.sidebar.button("SSV Builder"):
     page = "SSV Builder"
 
-if st.sidebar.button("SSV Plot Processing"):
-    page = "SSV Plot Processing"
-
 if st.sidebar.button("TMR Report Builder"):
     page = "TMR Report Builder"
 
@@ -570,6 +567,9 @@ if st.sidebar.button("4G / 5G Dashboard"):
 
 if st.sidebar.button("Worst Cells Dashboard"):
     page = "Worst Cells Dashboard"
+
+if st.sidebar.button("SSV Plot Processing"):
+    page = "SSV Plot Processing"
 
 st.sidebar.markdown("---")
 
@@ -615,7 +615,7 @@ st.sidebar.markdown("---")
 # =========================
 # Management
 # =========================
-st.sidebar.markdown("### Management Tools")
+st.sidebar.markdown("### Acceptance Follow-up Tools")
 
 if st.sidebar.button("Acceptance Tracker"):
     page = "Acceptance Tracker"
@@ -4107,6 +4107,22 @@ def show_cards_page():
 
 <div class="tools-card-wrap-6">
 
+                    
+    <div class="tool-card optimization-card">
+        <div class="team-pill">Optimization</div>
+        <div class="tool-title">SPARK</div>
+        <div class="info-label">Project</div>
+        <div class="info-value">XML preparation and LTE/5G audit automation</div>
+        <div class="info-label">Technology</div>
+        <div class="info-value">Python</div>
+        <div class="info-label">Business Impact</div>
+        <div class="info-value">Automated LTE/5G parsing, auditing and optimization workflows.</div>
+        <div class="info-label">Operational Gain</div>
+        <div class="info-value">Reduced audit time from hours to minutes with &gt;95% saving.</div>
+        <div class="status-pill">Completed</div>
+    </div>
+
+
     <div class="tool-card optimization-card">
         <div class="team-pill">Optimization</div>
         <div class="tool-title">SSV Builder</div>
@@ -4121,19 +4137,6 @@ def show_cards_page():
         <div class="status-pill">Completed</div>
     </div>
 
-    <div class="tool-card optimization-card">
-        <div class="team-pill">Optimization</div>
-        <div class="tool-title">SSV Plot Processing</div>
-        <div class="info-label">Project</div>
-        <div class="info-value">SSV plot from LOGOS</div>
-        <div class="info-label">Technology</div>
-        <div class="info-value">Python</div>
-        <div class="info-label">Business Impact</div>
-        <div class="info-value">Automated RSRP, SINR, PCI, HO and SWAP performance plots.</div>
-        <div class="info-label">Operational Gain</div>
-        <div class="info-value">Reduced total processing time from day-level effort to ~10 minutes.</div>
-        <div class="status-pill">Completed</div>
-    </div>
 
     <div class="tool-card optimization-card">
         <div class="team-pill">Optimization</div>
@@ -4149,20 +4152,7 @@ def show_cards_page():
         <div class="status-pill">Completed</div>
     </div>
 
-    <div class="tool-card optimization-card">
-        <div class="team-pill">Optimization</div>
-        <div class="tool-title">SPARK</div>
-        <div class="info-label">Project</div>
-        <div class="info-value">XML preparation and LTE/5G audit automation</div>
-        <div class="info-label">Technology</div>
-        <div class="info-value">Python</div>
-        <div class="info-label">Business Impact</div>
-        <div class="info-value">Automated LTE/5G parsing, auditing and optimization workflows.</div>
-        <div class="info-label">Operational Gain</div>
-        <div class="info-value">Reduced audit time from hours to minutes with &gt;95% saving.</div>
-        <div class="status-pill">Completed</div>
-    </div>
-
+                    
     <div class="tool-card optimization-card">
         <div class="team-pill">Optimization</div>
         <div class="tool-title">4G / 5G Dashboard</div>
@@ -4190,6 +4180,24 @@ def show_cards_page():
         <div class="info-value">Reduced worst-cell investigation time from hours to minutes.</div>
         <div class="status-pill">Completed</div>
     </div>
+
+    <div class="tool-card optimization-card">
+        <div class="team-pill">Optimization</div>
+        <div class="tool-title">SSV Plot Processing</div>
+        <div class="info-label">Project</div>
+        <div class="info-value">SSV plot from LOGOS</div>
+        <div class="info-label">Technology</div>
+        <div class="info-value">Python</div>
+        <div class="info-label">Business Impact</div>
+        <div class="info-value">Automated RSRP, SINR, PCI, HO and SWAP performance plots.</div>
+        <div class="info-label">Operational Gain</div>
+        <div class="info-value">Reduced total processing time from day-level effort to ~10 minutes.</div>
+        <div class="status-pill">Completed</div>
+    </div>                    
+
+
+
+
 
 </div>
 
@@ -4255,7 +4263,7 @@ def show_cards_page():
 
 </div>
 
-<div class="section-title xhaul-title">X-Haul & Management Tools</div>
+<div class="section-title xhaul-title">X-Haul & Acceptance Follow-up Tools</div>
 
 <div class="tools-card-wrap-4">
 
@@ -4820,6 +4828,16 @@ if page == "Home":
 
 
 
+<tr>
+<td><span class="team-badge opt">Optimization</span></td>
+<td>Automate New site preparation XML &amp; Audit</td>
+<td>SPARK</td>
+<td><span class="tech python">Python</span></td>
+<td><span class="status done">Completed</span></td>
+<td>Automated LTE/5G parsing, auditing, and optimization workflows with improved audit accuracy</td>
+<td>Reduced analysis and audit time from hours to minutes (&gt;95% time saving), especially for large-scale bulk site processing</td>
+</tr>
+
 
 <tr>
 <td><span class="team-badge opt">Optimization</span></td>
@@ -4831,15 +4849,6 @@ if page == "Home":
 <td>Generated 40 SSVs in ~10 minutes compared to ~3.5 hours manually (&gt;90% time saving)</td>
 </tr>
 
-<tr>
-<td><span class="team-badge opt">Optimization</span></td>
-<td>SSV plot from LOGOS</td>
-<td>SSV_Plot_Processing_Tool_zain</td>
-<td><span class="tech python">Python</span></td>
-<td><span class="status done">Completed</span></td>
-<td>Automated generation of RSRP, SINR, PCI, HO, and SWAP performance plots for remote network analysis without field visits</td>
-<td>Generated SSVs remotely without site visits, reducing total processing time from day to ~10 minutes per site</td>
-</tr>
 
 <tr>
 <td><span class="team-badge opt">Optimization</span></td>
@@ -4850,17 +4859,6 @@ if page == "Home":
 <td>Automated report creation and formatting with minimal manual work</td>
 <td>Reduced reporting effort by ~80%</td>
 </tr>
-
-<tr>
-<td><span class="team-badge opt">Optimization</span></td>
-<td>Automate New site preparation XML &amp; Audit</td>
-<td>SPARK</td>
-<td><span class="tech python">Python</span></td>
-<td><span class="status done">Completed</span></td>
-<td>Automated LTE/5G parsing, auditing, and optimization workflows with improved audit accuracy</td>
-<td>Reduced analysis and audit time from hours to minutes (&gt;95% time saving), especially for large-scale bulk site processing</td>
-</tr>
-
 
 
 <tr>
@@ -4883,15 +4881,17 @@ if page == "Home":
 <td>Reduced worst-cell identification time from hours to minutes</td>
 </tr>
 
+
 <tr>
-<td><span class="team-badge xhaul">X-haul planning</span></td>
-<td>LINK Perf Chart creation</td>
-<td>LINK Perf Chart creation</td>
+<td><span class="team-badge opt">Optimization</span></td>
+<td>SSV plot from LOGOS</td>
+<td>SSV_Plot_Processing_Tool_zain</td>
 <td><span class="tech python">Python</span></td>
-<td><span class="status progress">In Progress</span></td>
-<td>Automated X-haul performance chart generation and analysis</td>
-<td>Reduced chart preparation effort by ~85%</td>
+<td><span class="status done">Completed</span></td>
+<td>Automated generation of RSRP, SINR, PCI, HO, and SWAP performance plots for remote network analysis without field visits</td>
+<td>Generated SSVs remotely without site visits, reducing total processing time from day to ~10 minutes per site</td>
 </tr>
+
 
 <tr>
 <td><span class="team-badge xhaul">X-haul planning</span></td>
@@ -4902,6 +4902,29 @@ if page == "Home":
 <td>Automated GLI TX reporting with standardized outputs</td>
 <td>Reduced reporting time from several hours to minutes</td>
 </tr>
+
+
+<tr>
+<td><span class="team-badge xhaul">X-haul planning</span></td>
+<td>LINK Perf Chart creation</td>
+<td>LINK Perf Chart creation</td>
+<td><span class="tech python">Python</span></td>
+<td><span class="status progress">In Progress</span></td>
+<td>Automated X-haul performance chart generation and analysis</td>
+<td>Reduced chart preparation effort by ~85%</td>
+</tr>
+
+
+<tr>
+<td><span class="team-badge radio">Radio Planning</span></td>
+<td>KML</td>
+<td>Zain Network KML Plotter</td>
+<td><span class="tech python">Python</span></td>
+<td><span class="status done">Completed</span></td>
+<td>Professional LTE/5G Google Earth visualization and network analysis</td>
+<td>Reduced KML generation effort from hours to minutes (&gt;90% saving)</td>
+</tr>
+
 
 <tr>
 <td><span class="team-badge radio">Radio Planning</span></td>
@@ -4943,18 +4966,9 @@ if page == "Home":
 <td>Automatically retrieves latest Ookla data within seconds without manual intervention</td>
 </tr>
 
-<tr>
-<td><span class="team-badge radio">Radio Planning</span></td>
-<td>KML</td>
-<td>Zain Network KML Plotter</td>
-<td><span class="tech python">Python</span></td>
-<td><span class="status done">Completed</span></td>
-<td>Professional LTE/5G Google Earth visualization and network analysis</td>
-<td>Reduced KML generation effort from hours to minutes (&gt;90% saving)</td>
-</tr>
 
 <tr>
-<td><span class="team-badge mgmt">Management Tools</span></td>
+<td><span class="team-badge mgmt">Acceptance Follow-up Tools</span></td>
 <td>Acceptance tracker</td>
 <td>Nokia_Zain_Tracker</td>
 <td><span class="tech teams">Microsoft Teams</span></td>
