@@ -637,34 +637,40 @@ def get_base64(file_path):
 
 
 def show_video(video_path, video_id, missing_message):
-
     if os.path.exists(video_path):
-
         with open(video_path, "rb") as video_file:
             video_bytes = video_file.read()
 
         video_base64 = base64.b64encode(video_bytes).decode()
 
         components.html(f"""
-        <div style="display:flex; justify-content:center;">
-            <video width="60%" autoplay muted controls style="border-radius:18px;" id="{video_id}">
+        <div style="display:flex; justify-content:center; margin-top:20px;">
+            <video autoplay muted controls
+                style="
+                    width:90%;
+                    max-width:1400px;
+                    max-height:760px;
+                    border-radius:18px;
+                    object-fit:contain;
+                "
+                id="{video_id}">
                 <source src="data:video/mp4;base64,{video_base64}" type="video/mp4">
             </video>
         </div>
 
         <script>
         const video = document.getElementById("{video_id}");
-
         video.playbackRate = 1.3;
-
         video.onloadedmetadata = function() {{
             video.play();
         }};
         </script>
-        """, height=1200)
+        """, height=900)
 
     else:
         st.warning(missing_message)
+
+
 
 ################################################# KSPARKML #####################################################
 
