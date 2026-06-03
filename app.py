@@ -606,6 +606,8 @@ if st.sidebar.button("GLI_TX_Report"):
 if st.sidebar.button("LINK Perf Chart creation "):
     page = "LINK Perf Chart creation "
 
+if st.sidebar.button("Site Connectivity"):
+    page = "Site Connectivity"
 
 st.sidebar.markdown("---")
 
@@ -2509,13 +2511,13 @@ def show_radio_lld_page():
     </div>
     """, unsafe_allow_html=True)
 
-        if os.path.exists("assets/LLD_Tool.png"):
+        if os.path.exists("assets/LLD_tool_1.png"):
             st.image(
-                "assets/LLD_Tool.png",
+                "assets/LLD_tool_1.png",
                 use_container_width=True
             )
         else:
-            st.warning("Add image here: assets/LLD_Tool.png")
+            st.warning("Add image here: assets/LLD_tool_1.png")
 
     with col2:
 
